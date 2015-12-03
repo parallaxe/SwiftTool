@@ -1,0 +1,16 @@
+//
+//  swift.xcconfig
+//  SwiftTool
+//
+//  Created by Hendrik von Prince on 04/12/15.
+//  Copyright © 2015 Hendrik von Prince. All rights reserved.
+//
+
+// set this to the path where you checked out all swift-related projects. All other variables should fit without further adjustments
+BASE_DIR=$HOME/develop/thirdparty/swift
+
+COMPILATION_DIR=$BASE_DIR/build/Ninja-DebugAssert
+
+OTHER_LDFLAGS=-L$COMPILATION_DIR/swift-macosx-x86_64/lib -L$COMPILATION_DIR/llvm-macosx-x86_64/lib -L$COMPILATION_DIR/cmark-macosx-x86_64/src -L$COMPILATION_DIR/swift-macosx-x86_64/lib/swift/macosx $COMPILATION_DIR/cmark-macosx-x86_64/src/libcmark.a -lclangAnalysis -lclangAPINotes -lclangARCMigrate -lclangAST -lclangASTMatchers -lclangBasic -lclangCodeGen -lclangDriver -lclangDynamicASTMatchers -lclangEdit -lclangFormat -lclangFrontend -lclangFrontendTool -lclangIndex -lclangLex -lclangParse -lclangRewrite -lclangRewriteFrontend -lclangSema -lclangSerialization -lclangStaticAnalyzerCheckers -lclangStaticAnalyzerCore -lclangStaticAnalyzerFrontend -lclangTooling -lclangToolingCore -lLLVMAArch64AsmParser -lLLVMAArch64AsmPrinter -lLLVMAArch64CodeGen -lLLVMAArch64Desc -lLLVMAArch64Disassembler -lLLVMAArch64Info -lLLVMAArch64Utils -lLLVMAnalysis -lLLVMARMAsmParser -lLLVMARMAsmPrinter -lLLVMARMCodeGen -lLLVMARMDesc -lLLVMARMDisassembler -lLLVMARMInfo -lLLVMAsmParser -lLLVMAsmPrinter -lLLVMBitReader -lLLVMBitWriter -lLLVMCodeGen -lLLVMCore -lLLVMDebugInfoDWARF -lLLVMDebugInfoPDB -lLLVMExecutionEngine -lLLVMInstCombine -lLLVMInstrumentation -lLLVMInterpreter -lLLVMipo -lLLVMIRReader -lLLVMLibDriver -lLLVMLineEditor -lLLVMLinker -lLLVMLTO -lLLVMMC -lLLVMMCDisassembler -lLLVMMCJIT -lLLVMMCParser -lLLVMMIRParser -lLLVMObjCARCOpts -lLLVMObject -lLLVMOption -lLLVMOrcJIT -lLLVMPasses -lLLVMProfileData -lLLVMRuntimeDyld -lLLVMScalarOpts -lLLVMSelectionDAG -lLLVMSupport -lLLVMSymbolize -lLLVMTableGen -lLLVMTarget -lLLVMX86AsmParser -lLLVMX86AsmPrinter -lLLVMX86CodeGen -lLLVMX86Desc -lLLVMX86Disassembler -lLLVMX86Info -lLLVMX86Utils  -lLLVMTransformUtils -lLLVMVectorize -lSourceKitCore -lsourcekitdAPI -lSourceKitSupport -lSourceKitSwiftLang -lswiftAST -lswiftASTSectionImporter -lswiftBasic -lswiftClangImporter -lswiftDriver -lswiftFrontend -lswiftIDE -lswiftImmediate -lswiftIRGen -lswiftLLVMPasses -lswiftMarkup -lswiftOption -lswiftParse -lswiftPrintAsObjC -lswiftSema -lswiftSerialization -lswiftSIL -lswiftSILAnalysis -lswiftSILGen -lswiftSILPasses -lswiftSILPassesUtils -lswiftRuntime -lncurses -lz
+HEADER_SEARCH_PATHS=$BASE_DIR/swift/include $COMPILATION_DIR/llvm-macosx-x86_64/include $BASE_DIR/clang/include $BASE_DIR/llvm/include $COMPILATION_DIR/swift-macosx-x86_64/include
+OTHER_CPLUSPLUSFLAGS=-Wno-shorten-64-to-32 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -fno-rtti
